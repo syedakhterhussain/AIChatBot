@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
         OpenAIService openAIService = retrofit.create(OpenAIService.class);
         question.setText("Me: "+ query);
-        Call<GPTResponse> call = openAIService.getResponse("Bearer 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", new GPTRequest(query));
+        Call<GPTResponse> call = openAIService.getResponse("Bearer Enter OpenAI API Key", new GPTRequest(query));
         call.enqueue(new Callback<GPTResponse>() {
             @Override
             public void onResponse(Call<GPTResponse> call, retrofit2.Response<GPTResponse> response) {
